@@ -1486,48 +1486,37 @@ input:checked + .slider:before {
   function myFunction() {
     var c = document.getElementById('checker');
     if(c.checked == false) {
-      document.getElementById("dark1").src = "img/Image1.png";
-      document.getElementById("dar1").src = "img/Image1.png";
-      document.getElementById("dark2").src = "img/Image2.png";
-      document.getElementById("dar2").src = "img/Image2.png";
-      document.getElementById("dark3").src = "img/Image3.png";
-      document.getElementById("dar3").src = "img/Image3.png";
-      document.getElementById("dark4").src = "img/iphones.png";
-      document.getElementById("dar4").src = "img/iphones.png";
-
-
-
-
-      document.getElementById("dark6").src = "img/Image1.png";
-      document.getElementById("dar6").src = "img/Image1.png";
-      document.getElementById("dark7").src = "img/Image2.png";
-      document.getElementById("dar7").src = "img/Image2.png";
-      document.getElementById("dark8").src = "img/Image3.png";
-      document.getElementById("dar8").src = "img/Image3.png";
-      document.getElementById("dark9").src = "img/iphones.png";
-      document.getElementById("dar9").src = "img/iphones.png";
+      var r = document.getElementsByClassName("venobox");
+      var i;
+      for (i = 0; i < r.length; i++) {
+        var x = r[i].childNodes[0].src;
+        var t = x.includes("login");
+        var q = x.includes("iphone");
+        if(t == false && q == false) {
+          x = x.substring(0, x.length - 8);
+          xNew = x + ".png";
+          console.log(xNew);
+          r[i].childNodes[0].src = xNew;
+        }
+      }
     } else {
-      document.getElementById("dark1").src = "img/Image1dark.png";
-      document.getElementById("dar1").src = "img/Image1dark.png";
-      document.getElementById("dark2").src = "img/Image2dark.png";
-      document.getElementById("dar2").src = "img/Image2dark.png";
-      document.getElementById("dark3").src = "img/Image3dark.png";
-      document.getElementById("dar3").src = "img/Image3dark.png";
-      document.getElementById("dark4").src = "img/iphonedark.png";
-      document.getElementById("dar4").src = "img/iphonedark.png";
-
-      document.getElementById("dark6").src = "img/Image1dark.png";
-      document.getElementById("dar6").src = "img/Image1dark.png";
-      document.getElementById("dark7").src = "img/Image2dark.png";
-      document.getElementById("dar7").src = "img/Image2dark.png";
-      document.getElementById("dark8").src = "img/Image3dark.png";
-      document.getElementById("dar8").src = "img/Image3dark.png";
-      document.getElementById("dark9").src = "img/iphonedark.png";
-      document.getElementById("dar9").src = "img/iphonedark.png";
+      var r = document.getElementsByClassName("venobox");
+      var i;
+      for (i = 0; i < r.length; i++) {
+        var x = r[i].childNodes[0].src;
+        x = x.substring(0, x.length - 4);
+        var t = x.includes("login");
+        var q = x.includes("iphone");
+        if(t == false && q == false) {
+          xNew = x + "dark.png";
+          console.log(xNew);
+          r[i].childNodes[0].src = xNew;
+        }
+      }
     }
   }
 </script>
-    <section id="details" class="details">
+    <section id="details" class="details" >
       <div class="container">
 
         <div class="row content">
@@ -1642,16 +1631,17 @@ input:checked + .slider:before {
         </div>
 
         <div class="owl-carousel gallery-carousel" data-aos="fade-up">
-          <a href="img/Image1.png" id="dar1" class="venobox" data-gall="gallery-carousel"><img id="dark1" src="img/Image1.png" alt=""></a>
-          <a href="img/Image2.png" id="dar2" class="venobox" data-gall="gallery-carousel"><img id="dark2" src="img/Image2.png" alt=""></a>
-          <a href="img/Image3.png" id="dar3" class="venobox" data-gall="gallery-carousel"><img id="dark3" src="img/Image3.png" alt=""></a>
-          <a href="img/iphones.png" id="dar4" class="venobox" data-gall="gallery-carousel"><img id="dark4" src="img/iphones.png" alt=""></a>
-          <a href="img/login.jpg" id="dar5" class="venobox" data-gall="gallery-carousel"><img id="dark5" src="img/login.jpg" alt=""></a>
-          <a href="img/Image1.png" id="dar6" class="venobox" data-gall="gallery-carousel"><img id="dark6" src="img/Image1.png" alt=""></a>
-          <a href="img/Image2.png" id="dar7" class="venobox" data-gall="gallery-carousel"><img id="dark7" src="img/Image2.png" alt=""></a>
-          <a href="img/Image3.png" id="dar8" class="venobox" data-gall="gallery-carousel"><img id="dark8" src="img/Image3.png" alt=""></a>
-          <a href="img/iphones.png" id="dar9" class="venobox" data-gall="gallery-carousel"><img id="dark9" src="img/iphones.png" alt=""></a>
-          <a href="img/login.jpg" id="dar0" class="venobox" data-gall="gallery-carousel"><img id="dark0" src="img/login.jpg" alt=""></a>
+          <a href="img/Image1.png" id="dar1" class="venobox" data-gall="gallery-carousel"><img id="dark1" class="e"src="img/Image1.png" alt=""></a>
+          <a href="img/Image2.png" id="dar2" class="venobox" data-gall="gallery-carousel"><img id="dark2" class="e"src="img/Image2.png" alt=""></a>
+          <a href="img/Image3.png" id="dar3" class="venobox" data-gall="gallery-carousel"><img id="dark3" class="e"src="img/Image3.png" alt=""></a>
+          <a href="img/Image4.png" id="dar4" class="venobox" data-gall="gallery-carousel"><img id="dark4" class="e"src="img/Image4.png" alt=""></a>
+          <a href="img/login.jpg" id="dar5" class="venobox" data-gall="gallery-carousel"><img id="dark5" class="e"src="img/login.jpg" alt=""></a>
+          <a href="img/Image1.png" id="dar6" class="venobox" data-gall="gallery-carousel"><img id="dark6" class="e"src="img/Image1.png" alt=""></a>
+          <a href="img/Image2.png" id="dar7" class="venobox" data-gall="gallery-carousel"><img id="dark7" class="e"src="img/Image2.png" alt=""></a>
+          <a href="img/Image3.png" id="dar8" class="venobox" data-gall="gallery-carousel"><img id="dark8" class="e"src="img/Image3.png" alt=""></a>
+          <a href="img/Image4.png" id="dar9" class="venobox" data-gall="gallery-carousel"><img id="dark9" class="e"class="e"src="img/Image4.png" alt=""></a>
+          <a href="img/login.jpg" id="dar0" class="venobox" data-gall="gallery-carousel"><img id="dark0" class="e"src="img/login.jpg" alt=""></a>
+
         </div>
 
       </div>
